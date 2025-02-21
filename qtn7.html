@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function reversingString() {
+            let inputString = document.getElementById("textInput").value.trim();
+
+            // Check if input is empty
+            if (inputString === "") {
+                document.getElementById("result").innerText = "Please enter a string!";
+                return;
+            }
+
+            // Reverse the string
+            let reversedString = inputString.split("").reverse("").join("");
+
+            // Display result
+            document.getElementById("result").innerText = `Reversed String: ${reversedString}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>How to get string in a reversed format</h2>
+    <label for="textInput">Enter a string here:</label>
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button onclick="reversingString()">Click to get reversed string</button>
+    <p id="result"></p>
+</body>
+</html>
