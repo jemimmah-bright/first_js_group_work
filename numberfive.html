@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function countWords() {
+            let sentence = document.getElementById("sentenceInput").value.trim();
+
+            // Check if input is empty
+            if (sentence === "") {
+                document.getElementById("result").innerText = "Please enter a sentence!";
+                return;
+            }
+
+            // Split sentence into words and count them
+            let words = sentence.split(/\s+/); // Splitting by whitespace (handles multiple spaces)
+            let wordCount = words.length;
+
+            // Display result
+            document.getElementById("result").innerText = `Word Count: ${wordCount}`;}
+    </script>
+</head>
+<body>
+    <h2>Word Counter </h2>
+    <label for="sentenceInput"> Enter a sentence: </label>
+    <input type="text" id="sentenceInput" placeholder="Type a sentence">
+    <button onclick="countWords()"> Count Words </button>
+    <p id="result"></p>
+
+</body>
+</html>
